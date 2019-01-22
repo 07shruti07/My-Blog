@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+    <div class="page-header">
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+
+    <center>
+        <div>
+            <h1><a href="/">Art Blog</a></h1>
+        </div>
+
+        <div>
+            <p>published: 21.01.2019, 12:57</p>
+            <h2><a href="">Fine Arts</a></h2>
+            <p>Historically, the five main fine arts were painting, sculpture, architecture, music, and poetry,
+            with performing arts including theatre and dance.
+            Today, the fine arts commonly include additional forms, such as film, photography, video production/editing, design, sequential art, conceptual art, and printmaking.</p>
+        </div>
+
+        <div>
+            <p>published: 21.01.2019, 12:57</p>
+            <h2><a href="">Performing Arts</a></h2>
+            <p>Performing arts are a form of art in which artists use their voices, bodies or inanimate objects to convey artistic expression.
+            It is different from visual arts, which is when artists use paint, canvas or various materials to create physical or static art objects. Performing arts include a range of disciplines which are performed in front of a live audience.
+            </p>
+        </div>
+
+
+        <div class="content container">
+            <div class="row">
+                <div class="">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </center>
+</body>
+</html>

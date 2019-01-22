@@ -1,9 +1,20 @@
+{% extends 'blog/base.html' %}
+
+<!-- {% load static %}
+
 <html>
-<head><title>Django demo page</title></head>
+<head>
+	<title>Django demo page</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
 <body>
-	<h1><center>  Congratulations  </center></h1>
-    <p>Hi there!</p>
-    <p>It works!</p>
+	<div class="page-header">
+    	<h1><a href="/">Django Girls Blog</a></h1>
+	</div>
+
     <center>
         <div>
             <h1><a href="/">Art Blog</a></h1>
@@ -24,18 +35,28 @@
             It is different from visual arts, which is when artists use paint, canvas or various materials to create physical or static art objects. Performing arts include a range of disciplines which are performed in front of a live audience.
 			</p>
         </div>
+	
 
-        <div>
-        	{% for post in posts %}
-        		<div>
-        			<p>published: {{ post.published_date }}</p>
-        			<h2><a href="">{{ post.title }}</a></h2>
-        			<p>{{ post.text|linebreaksbr }}</p>
-        		</div>
-        		
-        	{% endfor %}
-        </div>
+        <div class="content container">
+   			<div class="row">
+        		<div class=""> -->
+        		{% block content %}	
+            		{% for post in posts %}
+            		<!-- <div class= "col-sm-4"> -->
+                		<div class="post">
+                    		<div class="date">
+                        		<p>published: {{ post.published_date }}</p>
+                    		</div>
+                    		<h1><a href="{% url 'post_detail' pik=post.pk %}">{{ post.title }}</a></h1>
+                    		<p>{{ post.text|linebreaksbr }}</p>
+                		</div>
+                	<!-- </div> -->
+            		{% endfor %}
+            	{% endblock %}
+        	<!-- 	</div>
+    		</div>
+		</div>
     </center>
 
 </body>
-</html>
+</html> -->
