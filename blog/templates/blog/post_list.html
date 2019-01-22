@@ -24,6 +24,17 @@
             It is different from visual arts, which is when artists use paint, canvas or various materials to create physical or static art objects. Performing arts include a range of disciplines which are performed in front of a live audience.
 			</p>
         </div>
+
+        <div>
+        	{% for post in posts %}
+        		<div>
+        			<p>published: {{ post.published_date }}</p>
+        			<h2><a href="">{{ post.title }}</a></h2>
+        			<p>{{ post.text|linebreaksbr }}</p>
+        		</div>
+        		
+        	{% endfor %}
+        </div>
     </center>
 
 </body>
