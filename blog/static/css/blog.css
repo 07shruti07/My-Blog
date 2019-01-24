@@ -1,5 +1,5 @@
 h1 a, h2 a {
-    color: #C25100;
+   color:   #C25100;
     font-family: 'Lobster';
 }
 
@@ -7,7 +7,23 @@ body {
     padding: 50px;
 }
 
+.alpha a{
+	color: #ea0b8d; 
+}
+.delta a{
+	color: #de0000;
+}
 
+
+.b{
+	color: #1c9aa2;
+}
+
+.col-sm-6{
+	padding: 10px;
+	height: auto; ;
+	width: 50%;
+}
 
 .page-header {
     background-color: #638801;  /*#c20300  #DAF7A6  #C25100 #CA78FF */
@@ -26,6 +42,7 @@ body {
     margin: 40px;
     text-align: center
 }
+
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
