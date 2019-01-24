@@ -9,12 +9,21 @@
     </head>
     <body>
     <div class="page-header">
-        <h1><a href="/">Django Girls Blog</a></h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+         <h1><a href="/">Art Blog</a></h1>
     </div>
 
     <center>
-        <div>
-            <h1><a href="/">Art Blog</a></h1>
+       
+        <div class="content container">
+            <div class="row">
+                <div class="">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
 
         <div>
@@ -31,16 +40,6 @@
             <p>Performing arts are a form of art in which artists use their voices, bodies or inanimate objects to convey artistic expression.
             It is different from visual arts, which is when artists use paint, canvas or various materials to create physical or static art objects. Performing arts include a range of disciplines which are performed in front of a live audience.
             </p>
-        </div>
-
-
-        <div class="content container">
-            <div class="row">
-                <div class="">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </div>
         </div>
 
     </center>
